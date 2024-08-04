@@ -16,6 +16,8 @@
 		DDE2F0452C5EF14C00A193C4 /* corbinDirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0442C5EF14C00A193C4 /* corbinDirectoryTests.swift */; };
 		DDE2F04F2C5EF14C00A193C4 /* corbinDirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F04E2C5EF14C00A193C4 /* corbinDirectoryUITests.swift */; };
 		DDE2F0512C5EF14C00A193C4 /* corbinDirectoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0502C5EF14C00A193C4 /* corbinDirectoryUITestsLaunchTests.swift */; };
+		DDE2F05F2C5EF2C600A193C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F05E2C5EF2C600A193C4 /* ContentView.swift */; };
+		DDE2F0612C5EF2D600A193C4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0602C5EF2D600A193C4 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		DDE2F04A2C5EF14C00A193C4 /* corbinDirectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = corbinDirectoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE2F04E2C5EF14C00A193C4 /* corbinDirectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = corbinDirectoryUITests.swift; sourceTree = "<group>"; };
 		DDE2F0502C5EF14C00A193C4 /* corbinDirectoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = corbinDirectoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDE2F05E2C5EF2C600A193C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DDE2F0602C5EF2D600A193C4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		DDE2F02C2C5EF14B00A193C4 /* corbinDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				DDE2F05D2C5EF28400A193C4 /* Views */,
 				DDE2F02D2C5EF14B00A193C4 /* AppDelegate.swift */,
 				DDE2F02F2C5EF14B00A193C4 /* SceneDelegate.swift */,
 				DDE2F0312C5EF14B00A193C4 /* ViewController.swift */,
@@ -125,6 +130,15 @@
 				DDE2F0502C5EF14C00A193C4 /* corbinDirectoryUITestsLaunchTests.swift */,
 			);
 			path = corbinDirectoryUITests;
+			sourceTree = "<group>";
+		};
+		DDE2F05D2C5EF28400A193C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DDE2F05E2C5EF2C600A193C4 /* ContentView.swift */,
+				DDE2F0602C5EF2D600A193C4 /* CustomButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +274,9 @@
 			files = (
 				DDE2F0322C5EF14B00A193C4 /* ViewController.swift in Sources */,
 				DDE2F02E2C5EF14B00A193C4 /* AppDelegate.swift in Sources */,
+				DDE2F05F2C5EF2C600A193C4 /* ContentView.swift in Sources */,
 				DDE2F0302C5EF14B00A193C4 /* SceneDelegate.swift in Sources */,
+				DDE2F0612C5EF2D600A193C4 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
