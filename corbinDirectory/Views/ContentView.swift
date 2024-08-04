@@ -9,11 +9,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(spacing: 20) {
-            CustomButton(title: "Open Instagram", color: .black, action: openInstagram)
-            CustomButton(title: "Open LinkedIn", color: .black, action: openLinkedIn)
+            CustomButton(title: "Open Instagram", gradient: LinearGradient(gradient: Gradient(colors: [Color.purple, Color.orange]), startPoint: .topLeading, endPoint: .bottomTrailing), action: openInstagram)
+            CustomButton(title: "Open LinkedIn", color: Color(hex: 0x0A66C2), action: openLinkedIn)
             CustomButton(title: "Open Gmail", color: .black, action: openGmail)
             CustomButton(title: "Open Outlook", color: .black, action: openOutlook)
-            CustomButton(title: "Open Twitter", color: .black, action: openTwitter)
+            CustomButton(title: "Open Twitter", color: .black,  borderColor: .white, borderWidth: 2, action: openTwitter)
             CustomButton(title: "Open Snapchat", color: .black, action: openSnapchat)
         }
         .padding()
@@ -23,8 +23,6 @@ struct ContentView: View {
         if let url = URL(string: "instagram://") {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                print("can not open url")
             }
         }
     }
