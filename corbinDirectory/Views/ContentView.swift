@@ -9,12 +9,29 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(spacing: 20) {
-            CustomButton(title: "Open Instagram", gradient: LinearGradient(gradient: Gradient(colors: [Color.purple, Color.orange]), startPoint: .topLeading, endPoint: .bottomTrailing), action: openInstagram)
-            CustomButton(title: "Open LinkedIn", color: Color(hex: 0x0A66C2), action: openLinkedIn)
-            CustomButton(title: "Open Gmail", color: .black, action: openGmail)
-            CustomButton(title: "Open Outlook", color: .black, action: openOutlook)
-            CustomButton(title: "Open Twitter", color: .black,  borderColor: .white, borderWidth: 2, action: openTwitter)
-            CustomButton(title: "Open Snapchat", color: .black, action: openSnapchat)
+            // Avatar
+            Image("avatar") // Replace "avatar" with the name of your image asset
+                .resizable()
+                .frame(width: 100, height: 100)
+                .clipShape(Circle())
+                .overlay(
+                    Circle().stroke(Color.white, lineWidth: 4)
+                )
+                .shadow(radius: 10)
+            
+            // Text
+            Text("User Name")
+                .font(.title)
+                .fontWeight(.bold)
+            
+            // Buttons
+            CustomButton(title: "Open Instagram", gradient: LinearGradient(gradient: Gradient(colors: [Color.purple, Color.orange]), startPoint: .topLeading, endPoint: .bottomTrailing), borderColor: .white, borderWidth: 2, action: openInstagram)
+            CustomButton(title: "Open LinkedIn", color: Color(hex: 0x0A66C2), borderColor: .white, borderWidth: 2, action: openLinkedIn)
+            CustomButton(title: "Open Gmail", gradient: LinearGradient(gradient: Gradient(colors: [Color(hex: 0x3e65cf), Color(hex: 0xc71610), Color(hex: 0xf2a60c), Color(hex: 0x3b60c4), Color(hex: 0x08851b)]), startPoint: .leading, endPoint: .trailing), borderColor: .white, borderWidth: 2, action: openGmail)
+            CustomButton(title: "Open Outlook", color: .black, borderColor: .white, borderWidth: 2, action: openOutlook)
+            CustomButton(title: "Open Twitter", color: .black, borderColor: .white, borderWidth: 2, action: openTwitter)
+            CustomButton(title: "Open Snapchat", color: .black, borderColor: .white, borderWidth: 2, action: openSnapchat)
+            CustomButton(title: "Open TikTok", color: .black, borderColor: .white, borderWidth: 2, action: openTikTok)
         }
         .padding()
     }
@@ -61,6 +78,14 @@ struct ContentView: View {
 
     func openSnapchat() {
         if let url = URL(string: "snapchat://") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    func openTikTok() {
+        if let url = URL(string: "musically://") {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }

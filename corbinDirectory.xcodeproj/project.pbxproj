@@ -12,7 +12,6 @@
 		DDE2F0322C5EF14B00A193C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0312C5EF14B00A193C4 /* ViewController.swift */; };
 		DDE2F0352C5EF14B00A193C4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DDE2F0342C5EF14B00A193C4 /* Base */; };
 		DDE2F0372C5EF14C00A193C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE2F0362C5EF14C00A193C4 /* Assets.xcassets */; };
-		DDE2F03A2C5EF14C00A193C4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DDE2F0392C5EF14C00A193C4 /* Base */; };
 		DDE2F0452C5EF14C00A193C4 /* corbinDirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0442C5EF14C00A193C4 /* corbinDirectoryTests.swift */; };
 		DDE2F04F2C5EF14C00A193C4 /* corbinDirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F04E2C5EF14C00A193C4 /* corbinDirectoryUITests.swift */; };
 		DDE2F0512C5EF14C00A193C4 /* corbinDirectoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0502C5EF14C00A193C4 /* corbinDirectoryUITestsLaunchTests.swift */; };
@@ -20,6 +19,7 @@
 		DDE2F0612C5EF2D600A193C4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0602C5EF2D600A193C4 /* CustomButton.swift */; };
 		DDE2F0642C5FF9CD00A193C4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0632C5FF9CD00A193C4 /* ColorExtension.swift */; };
 		DDE2F0662C5FFD3F00A193C4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0652C5FFD3F00A193C4 /* UIColorExtension.swift */; };
+		DDE2F06E2C60202500A193C4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE2F06D2C60202500A193C4 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		DDE2F0312C5EF14B00A193C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDE2F0342C5EF14B00A193C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDE2F0362C5EF14C00A193C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DDE2F0392C5EF14C00A193C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDE2F03B2C5EF14C00A193C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE2F0402C5EF14C00A193C4 /* corbinDirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = corbinDirectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE2F0442C5EF14C00A193C4 /* corbinDirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = corbinDirectoryTests.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		DDE2F0602C5EF2D600A193C4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DDE2F0632C5FF9CD00A193C4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DDE2F0652C5FFD3F00A193C4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		DDE2F06D2C60202500A193C4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +110,11 @@
 				DDE2F0622C5FF9AB00A193C4 /* Extensions */,
 				DDE2F05D2C5EF28400A193C4 /* Views */,
 				DDE2F02D2C5EF14B00A193C4 /* AppDelegate.swift */,
+				DDE2F06D2C60202500A193C4 /* Launch Screen.storyboard */,
 				DDE2F02F2C5EF14B00A193C4 /* SceneDelegate.swift */,
 				DDE2F0312C5EF14B00A193C4 /* ViewController.swift */,
 				DDE2F0332C5EF14B00A193C4 /* Main.storyboard */,
 				DDE2F0362C5EF14C00A193C4 /* Assets.xcassets */,
-				DDE2F0382C5EF14C00A193C4 /* LaunchScreen.storyboard */,
 				DDE2F03B2C5EF14C00A193C4 /* Info.plist */,
 			);
 			path = corbinDirectory;
@@ -259,8 +259,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE2F06E2C60202500A193C4 /* Launch Screen.storyboard in Resources */,
 				DDE2F0372C5EF14C00A193C4 /* Assets.xcassets in Resources */,
-				DDE2F03A2C5EF14C00A193C4 /* Base in Resources */,
 				DDE2F0352C5EF14B00A193C4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,14 +335,6 @@
 				DDE2F0342C5EF14B00A193C4 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DDE2F0382C5EF14C00A193C4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDE2F0392C5EF14C00A193C4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -477,8 +469,9 @@
 				DEVELOPMENT_TEAM = 467U3W224Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = corbinDirectory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Corbin;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -505,8 +498,9 @@
 				DEVELOPMENT_TEAM = 467U3W224Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = corbinDirectory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Corbin;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

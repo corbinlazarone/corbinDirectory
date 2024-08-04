@@ -10,10 +10,28 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .black
-        setupButtons()
-    }
+           super.viewDidLoad()
+           view.backgroundColor = .black
+           setupAvatarAndText()
+           setupButtons()
+       }
+    
+    func setupAvatarAndText() {
+           // Avatar
+           let avatarImageView = UIImageView(image: UIImage(named: "avatarPhoto"))
+           avatarImageView.frame = CGRect(x: (view.frame.width - 100) / 2, y: 100, width: 100, height: 100)
+           avatarImageView.layer.cornerRadius = 50
+           avatarImageView.clipsToBounds = true
+           view.addSubview(avatarImageView)
+           
+           // Text
+           let nameLabel = UILabel(frame: CGRect(x: 0, y: 230, width: view.frame.width, height: 30))
+           nameLabel.text = greetingBasedOnTime()
+           nameLabel.textAlignment = .center
+           nameLabel.font = UIFont.boldSystemFont(ofSize: 24)
+           nameLabel.textColor = .white
+           view.addSubview(nameLabel)
+       }
 
     func setupButtons() {
         let buttonTitles: [(String, Any)] = [
@@ -22,10 +40,11 @@ class ViewController: UIViewController {
             ("Gmail", UIColor.clear),
             ("Outlook", UIColor.clear),
             ("X", UIColor.black),
-            ("Snapchat", 0xFFFC00)
+            ("Snapchat", 0xFFFC00),
+            ("TikTok", UIColor.black)
         ]
         
-        var yPosition: CGFloat = 400
+        var yPosition: CGFloat = 300
         for (title, color) in buttonTitles {
             let button = UIButton(type: .system)
             button.frame = CGRect(x: 50, y: yPosition, width: 300, height: 50)
@@ -35,14 +54,14 @@ class ViewController: UIViewController {
                 applyGmailGradientToButton(button)
             } else if title == "Outlook" {
                 applyOutlookGradientToButton(button)
+            } else if title == "TikTok" {
+                applyTikTokGradient(button)
             }
             else if let hexColor = color as? Int {
                 button.backgroundColor = UIColor(hex: hexColor)
             } else if let uiColor = color as? UIColor {
                 button.backgroundColor = uiColor
             }
-            button.setTitle(title, for: .normal)
-            
             if title == "Snapchat" {
                 button.setTitleColor(.black, for: .normal)
             } else {
@@ -52,12 +71,26 @@ class ViewController: UIViewController {
                 button.layer.borderWidth = 2
                 button.layer.borderColor = UIColor.white.cgColor
             }
+            button.setTitle(title, for: .normal)
             button.layer.cornerRadius = 8
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
             button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
             self.view.addSubview(button)
             
             yPosition += 60
+        }
+    }
+    
+    func greetingBasedOnTime() -> String {
+        let currentHour = Calendar.current.component(.hour, from: Date())
+        
+        switch currentHour {
+        case 0...11:
+            return "Good morning"
+        case 12...19:
+            return "Good afternoon"
+        default:
+            return "Good night"
         }
     }
     
@@ -111,6 +144,23 @@ class ViewController: UIViewController {
            button.layer.masksToBounds = true
            gradientLayer.frame = button.bounds
        }
+    
+    func applyTikTokGradient(_ button: UIButton) {
+           let gradientLayer = CAGradientLayer()
+           gradientLayer.colors = [
+               UIColor(hex: 0x000000).cgColor,
+               UIColor(hex: 0x00f2ea).cgColor,
+               UIColor(hex: 0xff0050).cgColor,
+           ]
+           gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+           gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+           gradientLayer.frame = button.bounds
+           gradientLayer.cornerRadius = 8
+           button.layer.insertSublayer(gradientLayer, at: 0)
+           
+           button.layer.masksToBounds = true
+           gradientLayer.frame = button.bounds
+       }
 
     @objc func buttonTapped(_ sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
@@ -124,10 +174,12 @@ class ViewController: UIViewController {
             openGmail()
         case "Outlook":
             openOutlook()
-        case "Twitter":
+        case "X":
             openTwitter()
         case "Snapchat":
             openSnapchat()
+        case "TikTok":
+            openTikTok()
         default:
             break
         }
@@ -175,6 +227,14 @@ class ViewController: UIViewController {
 
     func openSnapchat() {
         if let url = URL(string: "snapchat://") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    func openTikTok() {
+        if let url = URL(string: "musically://") {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
