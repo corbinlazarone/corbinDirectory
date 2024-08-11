@@ -7,17 +7,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingImagePicker = false
+    @State private var avatarImage: UIImage? = UIImage(named: "avatarPhoto")
+    
     var body: some View {
         VStack(spacing: 20) {
             // Avatar
-            Image("avatar") // Replace "avatar" with the name of your image asset
-                .resizable()
-                .frame(width: 100, height: 100)
-                .clipShape(Circle())
-                .overlay(
-                    Circle().stroke(Color.white, lineWidth: 4)
-                )
-                .shadow(radius: 10)
+            if let image = avatarImage {
+                Image(uiImage: image)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle().stroke(Color.white, lineWidth: 4)
+                    )
+                    .shadow(radius: 10)
+                    .onTapGesture {
+                        self.showingImagePicker = true
+                    }
+            }
             
             // Text
             Text("User Name")

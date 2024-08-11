@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDD59AB62C69225D00697933 /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD59AB52C69225D00697933 /* imagePicker.swift */; };
 		DDE2F02E2C5EF14B00A193C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F02D2C5EF14B00A193C4 /* AppDelegate.swift */; };
 		DDE2F0302C5EF14B00A193C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F02F2C5EF14B00A193C4 /* SceneDelegate.swift */; };
 		DDE2F0322C5EF14B00A193C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2F0312C5EF14B00A193C4 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DDD59AB52C69225D00697933 /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
 		DDE2F02A2C5EF14B00A193C4 /* corbinDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = corbinDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE2F02D2C5EF14B00A193C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDE2F02F2C5EF14B00A193C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DDD59AB42C69224D00697933 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				DDD59AB52C69225D00697933 /* imagePicker.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		DDE2F0212C5EF14B00A193C4 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		DDE2F02C2C5EF14B00A193C4 /* corbinDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				DDD59AB42C69224D00697933 /* utils */,
 				DDE2F0622C5FF9AB00A193C4 /* Extensions */,
 				DDE2F05D2C5EF28400A193C4 /* Views */,
 				DDE2F02D2C5EF14B00A193C4 /* AppDelegate.swift */,
@@ -291,6 +302,7 @@
 				DDE2F02E2C5EF14B00A193C4 /* AppDelegate.swift in Sources */,
 				DDE2F05F2C5EF2C600A193C4 /* ContentView.swift in Sources */,
 				DDE2F0642C5FF9CD00A193C4 /* ColorExtension.swift in Sources */,
+				DDD59AB62C69225D00697933 /* imagePicker.swift in Sources */,
 				DDE2F0302C5EF14B00A193C4 /* SceneDelegate.swift in Sources */,
 				DDE2F0612C5EF2D600A193C4 /* CustomButton.swift in Sources */,
 			);
